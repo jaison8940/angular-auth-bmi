@@ -1,0 +1,17 @@
+{
+  "auth": {
+    "amplifyapp25bd5afd0": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd",
+      "lastPushTimeStamp": "2021-02-11T05:54:00.890Z"
+    }
+  }
+}
