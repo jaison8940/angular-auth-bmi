@@ -35,73 +35,13 @@
 
 </head>
 <body>
-  <app-root></app-root>
-  <div id="bmi_div" class="text-center"> 
+  
+  <app-root>
 
-    <h1 class="h3 mb-3 font-weight-normal">BMI CALCULATOR</h1>
-
-      <label for="inputEmail" class="sr-only" >Height</label>
-      <input type="number" class="form-control" id="height" placeholder="cm">
-      <br><br>
-
-
-      <label for="inputPassword" class="sr-only">Weight</label>
-      <input type="number" class="form-control" id="weight" placeholder="kg">
-      <br><br>	
-      
-      <button id="get" class="btn btn-sm btn-primary btn-block" type="button" onclick="calculateBMI();">Get BMI</button>
-      
- 
-     
-
-  </div>
-
-  <div id="result" class="">
-    
-    
-  </div>
-      
-      <script type="text/javascript">
-        function calculateBMI(){
-          var w = document.getElementById("weight").value;
-          var h = (document.getElementById("height").value)/100;
-          var bmi = (w/(h*h));
-          var temp = "";
-          var res = document.getElementById("result");
-          if(bmi < 18.5)
-          {
-            res.className = "alert alert-danger";
-            temp = "Under weight: "+ bmi;
-          }
-          else if(bmi >= 18.5 && bmi < 25)
-          {
-            res.className = "alert alert-success";
-            temp = "Normal: "+ bmi;
-
-          }
-          else if(bmi >= 25 && bmi < 30)
-          {
-            res.className = "alert alert-danger";
-            temp = "Over weight: "+ bmi;
-
-          }
-          else if(bmi >= 30)
-          {
-            res.className = "alert alert-danger";
-            temp = "Obese: "+ bmi;
-          }
-          else
-          {
-            res.className = "alert alert-danger";
-            temp = "Please enter values!";
-          }
-
-
-          res.innerHTML = temp;
-          
-        }
-
-      </script>
+        
+  </app-root>
+  
+  
 </body> 
 </html>
 

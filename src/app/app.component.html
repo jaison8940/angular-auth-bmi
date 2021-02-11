@@ -4,6 +4,35 @@
   </div>
   <!-- previous code -->
   
+  <!-- <input type="text"  class="form-control" #f >
+  <input type="text"  class="form-control" #s >
+  
+  <button (click)="OnInput(f.value,s.value)" >change</button> -->
+
+  <div id="bmi_div" class="text-center"> 
+
+      <h1 class="h3 mb-3 font-weight-normal">BMI CALCULATOR</h1>
+
+      <label for="inputEmail" class="sr-only" >Height</label>
+      <input type="number" class="form-control" #f id="height" placeholder="cm">
+      <br><br>
+
+
+      <label for="inputPassword" class="sr-only">Weight</label>
+      <input type="number" class="form-control" #s id="weight" placeholder="kg">
+      <br><br>	
+      
+      <button id="get" class="btn btn-sm btn-primary btn-block" type="button" (click)="OnInput(f.value,s.value)">Get BMI</button>
+  </div>
+
+      <div id="result" [class]="def">
+        {{title}}
+    	
+      </div>
+     
+
+  
+  
 
 </amplify-authenticator>
 
@@ -11,13 +40,6 @@
 
 
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
 
