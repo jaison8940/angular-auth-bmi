@@ -1,45 +1,32 @@
-import { i18nMetaToJSDoc } from '@angular/compiler/src/render3/view/i18n/meta';
-import { Component } from '@angular/core';
-import { freeApiService } from './services/freeapi.service';
-// import { BADFAMILY } from 'dns';
-import { Comments } from './classes/comments';
-import { Post } from './classes/post';
+import { Component, OnInit } from '@angular/core';
+import { freeApiService } from '../services/freeapi.service';
+import { Post } from '../classes/post';
+
+import { AppComponent } from '../app.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-navig',
+  templateUrl: './navig.component.html',
+  styleUrls: ['./navig.component.css']
 })
-export class AppComponent {
-  message = 'Welcome to Reminder and BMI App using Angular!';
+export class NavigComponent implements OnInit {
+  g = '';
+  title = '';
+
   bmi = 0;
   def = '';
-
   constructor(private _freeApiService: freeApiService) {
 
   }
-  lstcomments:Comments[] | undefined;
 
-  ngOnInit(){
-    this._freeApiService.getcomments()
-    .subscribe
-    (
-      data=>
-      {
-        this.lstcomments = data;
-      }
-
-    );
-
-
-    
-
-
+  ngOnInit(): void {
+    // AppComponent.message = '';
+    this.g = 'welcome';
   }
 
   OnInput(value1: any, value2: any,value3: any, value4: any,value5: any, value6: any,value7: any, value8: any,value9: any, value10: any) {
     
-    
+   
 
     var opost = new Post();
     opost.name = 'insert';
@@ -60,10 +47,9 @@ export class AppComponent {
       data=>
       {
         console.log(data);
-
+        this.title = data.body;
       }
     );
+  }
 
-    
-   }
 }

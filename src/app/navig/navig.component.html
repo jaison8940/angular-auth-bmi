@@ -1,0 +1,76 @@
+<div id="cert">
+		<!-- <a routerLink="/reg">
+			reg
+		  </a> -->
+      {{title}}
+      <h1>Enter your Certification Details!</h1>
+	   <br>
+
+     <label for="employeeid"><b>Employee ID</b></label>
+	   <input type="number" #emp_id name="employee_id" required /><br /><br />
+
+	   <label for="employeename"><b>Employee Name</b></label>
+	   <input type="text" #emp_name name="employee_name" required /><br /><br />
+
+	   <label for="email"><b>Email</b></label>
+	   <input type="email" #email name="email" required /><br /><br />
+
+	   <label for="csp"><b>CSP</b></label><br />
+	   <select id="csp" #csp name="csp">
+		   <option value="aws">AWS</option>
+		   <option value="azure">Azure</option>
+		   <option value="gcp">GCP</option>
+	   </select>
+
+	   <label for="level"><b>Certification Level</b></label><br/>
+	   <input type="text" #cert_level name="certification_level">
+       
+
+	   <label for="cername"><b>Certification Name</b></label><br />
+	   <select id="cername" #cert_name name="certification_name">
+	   		<option value="AWS Certified Solution Architect Associate">AWS Certified Solution Architect Associate</option>
+		    <option value="AWS Certified Solution Architect Professional">AWS Certified Solution Architect Professional</option>
+		    <option value="AWS Certified Developer Associate">AWS Certified Developer Associate</option>
+		    <option value="AWS Certified Developer Professional">AWS Certified Developer Professional</option>
+			<option value="AWS Certified Cloud Practioner">AWS Certified Cloud Practioner</option>
+			<option value="AWS Certified BigData Analytics">AWS Certified BigData Analytics </option>
+			<option value="AWS Certified Database Specialist">AWS Certified Database Specialist </option>
+			<option value="AWS Certified Devops Engineer">AWS Certified Devops Engineer</option>
+			<option value="Microsoft Certified Azure Fundamentals">Microsoft Certified Azure Fundamentals</option>
+			<option value="Microsoft Certified Azure Data Fundamentals">Microsoft Certified Azure Data Fundamentals</option>
+			<option value="Microsoft Certified Azure AI Fundamentals">Microsoft Certified Azure AI Fundamentals</option>
+			<option value="Microsoft Certified Azure Administrator Associate">Microsoft Certified Azure Administrator Associate</option>
+			<option value="Microsoft Certified Azure Developer Associate">Microsoft Certified Azure Developer Associate</option>
+			<option value="Microsoft Certified Azure Database Administrator Associate">Microsoft Certified Azure Database Administrator Associate</option>
+			<option value="Microsoft Certified Azure Solutions Architect Expert">Microsoft Certified Azure Solutions Architect Expert</option>
+			<option value=">Microsoft Certified DevOps Engineer Expert">Microsoft Certified DevOps Engineer Expert</option>
+			<option value="GCP Certified Engineer Associate">GCP Certified Engineer Associate</option>
+			<option value="GCP Certified Architect Professional">GCP Certified Architect Professional</option>
+			<option value="CP Certified Developer Professional">GCP Certified Developer Professional</option>
+			<option value="GCP Certified Data Engineer Professional">GCP Certified Data Engineer Professional</option>
+			<option value="GCP Certified DevOps Engineer Professional">GCP Certified DevOps Engineer Professional</option>
+			<option value="GCP Certified Security Engineer Professional">GCP Certified Security Engineer Professional</option>
+			<option value="GCP Certified Network Engineer Professional">GCP Certified Network Engineer Professional</option>
+			<option value="GCP Certified Machine Learning Engineer Professional">GCP Certified Machine Learning Engineer Professional</option>
+	   </select>
+
+	   <label for="ID"><b>Certification ID</b></label>
+	   <input type="text" id="ID" #cert_id name="certification_id" required />
+
+	   <label for="date"><b>Date of Certification</b></label>
+	   <input type="date" class="form-control" #doc name="date_of_certification" required /><br /><br />
+
+	   <label for="expire"><b>Expiry Date Of Certification</b></label>
+	   <input type="date" class="form-control" #ed name="expiry_date" required /><br /><br />
+
+	   <label for="validity"><b>Validity</b></label>
+	   <input type="number" id="number" #validity name="validity" required /><br /><br />
+	   
+	   
+	   <input type="submit" (click)="OnInput(emp_id.value,emp_name.value,email.value,csp.value,cert_level.value,cert_name.value,cert_id.value,doc.value,ed.value,validity.value)" name="submit" value="submit" />
+      
+
+    </div> 
+
+
+<router-outlet></router-outlet>
