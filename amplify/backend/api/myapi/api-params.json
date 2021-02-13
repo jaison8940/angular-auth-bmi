@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/enter",
+            "lambdaFunction": "amplifyapp218befcb5",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/enter"
+        }
+    ],
+    "resourceName": "myapi",
+    "apiName": "myapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "amplifyapp218befcb5"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-amplifyapp2-dev-102805-authRole",
+        "unAuthRoleName": "amplify-amplifyapp2-dev-102805-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "amplifyapp218befcb5",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
